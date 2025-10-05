@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <img src="/militech-logo.webp" alt="MiliTech Logo" className="h-8 w-auto object-contain" />
-            <span className="text-lg font-semibold tracking-tight text-white group-hover:text-orange-100 transition-colors">
+            <span className="text-lg font-semibold tracking-wider text-white group-hover:text-orange-100 transition-colors">
               Mili<span className="text-orange-500">Tech</span>
             </span>
           </Link>

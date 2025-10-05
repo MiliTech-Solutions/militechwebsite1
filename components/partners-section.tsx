@@ -4,7 +4,7 @@ export function PartnersSection() {
   const partners = Array.from({ length: 8 }, (_, i) => ({
     id: i + 1,
     name: `Partner ${i + 1}`,
-    logo: `/placeholder.svg?height=80&width=120&query=company brand logo ${i + 1}`,
+    logo: i === 0 ? "https://i.postimg.cc/zBXM63p7/inotech-logo-updated.png" : i === 1 ? "https://i.postimg.cc/prz4x99K/1-removebg-preview.png" : i === 2 ? "https://i.postimg.cc/rswR24ZG/2-removebg-preview.png" : i === 3 ? "https://i.postimg.cc/9XqHNkJg/3.png" : i === 4 ? "https://i.postimg.cc/PqJqqKrL/Orange-Gradient-Logo-removebg-preview.png" : i === 5 ? "https://i.postimg.cc/3wWKhB30/1-Logo-Atlas-removebg-preview.png" : i === 6 ? "https://i.postimg.cc/5t5V5R9r/1-Nexora-Logo-removebg-preview.png" : i === 7 ? "https://i.postimg.cc/qqbBs37Y/1-Logo-Transparent-removebg-preview.png" : `/placeholder.svg?height=80&width=120&query=company brand logo ${i + 1}`,
   }))
 
   return (
@@ -20,23 +20,22 @@ export function PartnersSection() {
         <div className="absolute bottom-10 right-6 w-36 h-1 bg-gradient-to-l from-orange-500 to-orange-700 shadow-[0_0_12px_rgba(234,88,12,0.5)]" />
 
         <div className="text-center mb-12 relative">
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-12 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
           <h2 className="text-3xl md:text-4xl font-bold text-white pt-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-            Our Partners
+            Trusted by Industry Leaders
           </h2>
 
-          <div className="w-28 h-1 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 mx-auto mt-4 shadow-[0_0_12px_rgba(249,115,22,0.5)]" />
-          <div className="w-20 h-0.5 bg-gradient-to-r from-orange-300 to-orange-700 mx-auto mt-1" />
-
-          <p className="text-gray-300 mt-4">{"Trusted by leading organizations"}</p>
+          <div className="w-40 h-1 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 mx-auto mt-4 shadow-[0_0_12px_rgba(249,115,22,0.5)]" />
+          <div className="w-32 h-0.5 bg-gradient-to-r from-orange-300 to-orange-700 mx-auto mt-1" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-          {partners.map((p) => (
+          {partners.map((p, i) => (
             <div
               key={p.id}
-              className="flex justify-center items-center rounded-lg border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black p-4 hover:border-orange-500 hover:shadow-[0_0_25px_rgba(249,115,22,0.2)] transition-all relative overflow-hidden group"
+              className="h-36 flex justify-center items-center rounded-lg border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black p-4 hover:border-orange-500 hover:shadow-[0_0_25px_rgba(249,115,22,0.2)] transition-all relative overflow-hidden group"
             >
               {/* Enhanced orange accents */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-600/40 via-orange-400/60 to-orange-500/40 group-hover:from-orange-600 group-hover:via-orange-400 group-hover:to-orange-500 transition-colors" />
@@ -48,9 +47,9 @@ export function PartnersSection() {
               <Image
                 src={p.logo || "/placeholder.svg"}
                 alt={p.name}
-                width={120}
-                height={80}
-                className="opacity-80 hover:opacity-100 transition-opacity filter group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]"
+                width={i === 1 ? 110 : i === 2 ? 110 : i === 7 ? 80 : i === 3 ? 100 : 120}
+                height={i === 1 ? 70 : i === 2 ? 70 : i === 7 ? 40 : i === 3 ? 60 : 80}
+                className="opacity-80 hover:opacity-100 transition-opacity filter group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.3)] object-contain"
               />
 
               {/* Bottom accent */}

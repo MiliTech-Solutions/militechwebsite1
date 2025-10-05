@@ -4,7 +4,7 @@ const items = [
   { icon: Stethoscope, title: "Healthcare & HealthTech" },
   { icon: Landmark, title: "Banking & Finance" },
   { icon: Truck, title: "Logistics & Supply Chain" },
-  { icon: Building2, title: "Government & Public Sector" },
+  { icon: Building2, title: "Government & Military" },
 ]
 
 export function IndustryExpertiseSection() {
@@ -20,8 +20,8 @@ export function IndustryExpertiseSection() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative">
         <div className="text-center mb-12 relative">
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-4 h-12 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
+          <div className="absolute -top-14 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-14 left-1/2 transform -translate-x-1/2 w-4 h-12 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
           <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
             Industry Expertise

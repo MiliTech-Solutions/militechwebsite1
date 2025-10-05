@@ -3,22 +3,22 @@ import Image from "next/image"
 
 const events = [
   {
-    title: "IDEAS KHI - 2024",
-    date: "March 15–17, 2024",
+    title: "Digital Pakistan",
+    date: "August 15, 2024",
     description: "Showcased AI solutions and cybersecurity innovations at Pakistan's premier defense exhibition.",
-    image: "/placeholder.svg?height=200&width=360",
+    image: "https://i.postimg.cc/YCPw1634/7ea29b0361e270535864a61d06fb4f43.jpg",
   },
   {
     title: "Tech Summit Islamabad",
     date: "January 20, 2024",
     description: "Presented ERP solutions and digital transformation strategies to public and private leaders.",
-    image: "/placeholder.svg?height=200&width=360",
+    image: "https://i.postimg.cc/gkRR9sxN/073547e1e29702e6242fe14072c18497.jpg",
   },
   {
     title: "Cybersecurity Workshop",
     date: "November 10, 2023",
     description: "Training on modern cyber threats and our PhishNet simulation toolkit.",
-    image: "/placeholder.svg?height=200&width=360",
+    image: "https://i.postimg.cc/B6YbDLXj/6a92c2c53f7df542f804f1e8324f5e64.jpg",
   },
 ]
 
@@ -36,7 +36,8 @@ export function EventsSection() {
         <div className="absolute bottom-12 right-4 w-40 h-1 bg-gradient-to-l from-orange-500 to-orange-700 shadow-[0_0_15px_rgba(234,88,12,0.5)]" />
 
         <div className="text-center mb-12 relative">
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-12 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
           <h2 className="text-3xl md:text-4xl font-bold text-white pt-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
             Recent Events

@@ -45,10 +45,10 @@ export function HeroSection() {
             {/* Social Links */}
             <div className="flex items-center pt-[91px] gap-[76px]">
               {[
-                { name: "FACEBOOK", href: "#" },
-                { name: "INSTAGRAM", href: "#" },
-                { name: "LINKEDIN", href: "#" },
-                { name: "YOUTUBE", href: "#" },
+                { name: "FACEBOOK", href: "https://www.facebook.com/share/1DGwgmUirP/" },
+                { name: "INSTAGRAM", href: "https://www.instagram.com/militechsoln?igsh=OTVzcWhnZGZ3Ymtw" },
+                { name: "LINKEDIN", href: "https://www.linkedin.com/company/militechsolutions-technology-information-media/" },
+                { name: "YOUTUBE", href: "https://youtube.com/@militech_solutions?si=iZs2MbZo_iI2B-dI" },
               ].map((social, idx) => (
                 <a
                   key={social.name}
@@ -65,7 +65,14 @@ export function HeroSection() {
         {/* Right Visual - Exactly 50% filling full height */}
         <div className="w-1/2 h-full relative">
           {/* Main Image Container - Full height and width */}
-          <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black border-l border-gray-800 hover:border-orange-500/50 transition-all hover:shadow-[0_0_40px_rgba(249,115,22,0.2)] flex items-center justify-center relative overflow-hidden">
+          <div
+            className="w-full h-full border-l border-gray-800 hover:border-orange-500/50 transition-all hover:shadow-[0_0_40px_rgba(249,115,22,0.2)] flex items-center justify-center relative overflow-hidden"
+            style={{
+              backgroundImage: "url('https://i.postimg.cc/cJLK3df8/5ce559177078cd244f889b1ca5d1ec53.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             {/* Orange glow effects */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-orange-500/30 to-transparent rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-orange-600/20 to-transparent rounded-full blur-3xl" />
@@ -83,14 +90,6 @@ export function HeroSection() {
               <div className="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-orange-500/40" />
               <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-orange-600/40" />
               <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-orange-700/40" />
-            </div>
-
-            {/* Center content */}
-            <div className="text-center text-gray-500 z-10">
-              <Shield className="h-20 w-20 text-orange-500/50 mx-auto mb-6" />
-              <div className="text-xl font-medium mb-3">Hero Visual Placeholder</div>
-              <div className="text-sm mb-2">Full Height Image</div>
-              <div className="text-xs text-orange-400">Cybersecurity themed image</div>
             </div>
 
             {/* Floating particles */}

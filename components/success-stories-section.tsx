@@ -1,9 +1,10 @@
 import Image from "next/image"
 
 const cases = [
-  { tag: "New", title: "Digital Banking Transformation", quote: "24x faster transactions, 99.99% uptime." },
-  { tag: "Modernization", title: "Healthcare Data Analytics Platform", quote: "60% improvement in outcomes." },
-  { tag: "Update", title: "Supply Chain Optimization", quote: "28% reduction in operational costs." },
+  { tag: "New", title: "Digital Banking Transformation", quote: "24x faster transactions, 99.99% uptime.", image: "https://i.postimg.cc/ryZkYnYQ/85b679a0729026156824436514a49574.jpg" },
+  { tag: "Modernization", title: "Healthcare Data Analytics Platform", quote: "60% improvement in outcomes.", image: "https://i.postimg.cc/Jh7R9ZXX/dd7b9965920110d32585eee96176c3b9.jpg" },
+  { tag: "Update", title: "Supply Chain Optimization", quote: "28% reduction in operational costs.", image: "https://i.postimg.cc/0yB9GvN4/377a2c062fdbd41feab898787cee409c.jpg" },
+  { tag: "Update", title: "SaaS Platform", quote: "UI/UX Overhaul", image: "https://i.postimg.cc/hvLwD3W9/wizard-banner-1-1.jpg" },
 ]
 
 export function SuccessStoriesSection() {
@@ -20,7 +21,8 @@ export function SuccessStoriesSection() {
         <div className="absolute bottom-10 right-6 w-36 h-1 bg-gradient-to-l from-orange-500 to-orange-700 shadow-[0_0_12px_rgba(234,88,12,0.5)]" />
 
         <div className="text-center mb-10 relative">
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-2 h-12 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-12 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
           <h2 className="text-3xl md:text-4xl font-bold text-white pt-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
             Success Stories
@@ -58,7 +60,7 @@ export function SuccessStoriesSection() {
 
               <div className="h-36 w-full rounded-lg bg-black border-2 border-gray-800 group-hover:border-orange-500/50 overflow-hidden transition-colors relative">
                 <Image
-                  src={"/placeholder.svg?height=160&width=640&query=case study image"}
+                  src={c.image || "/placeholder.svg?height=160&width=640&query=case study image"}
                   alt={`${c.title} placeholder`}
                   width={640}
                   height={160}

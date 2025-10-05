@@ -1,4 +1,6 @@
 import { Shield, Lock, Eye, Database, Users, BadgeCheck } from "lucide-react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 const services = [
   { icon: Shield, title: "Threat Intelligence", desc: "Advanced detection and analysis for emerging risks." },
@@ -9,7 +11,14 @@ const services = [
   { icon: BadgeCheck, title: "Compliance Management", desc: "Adherence to standards and regulations." },
 ]
 
-export function ServicesGrid() {
+interface ServicesGridProps {
+  limit?: number;
+  showViewAll?: boolean;
+}
+
+export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) {
+  const displayedServices = limit ? services.slice(0, limit) : services;
+
   return (
     <section id="services" className="py-20 bg-black relative overflow-hidden">
       {/* Enhanced orange separators and accent lines */}
@@ -26,8 +35,8 @@ export function ServicesGrid() {
         <div className="absolute bottom-14 right-10 w-24 h-0.5 bg-gradient-to-l from-orange-300 to-orange-600" />
 
         <div className="text-center mb-12 relative">
-          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_25px_rgba(249,115,22,0.6)]" />
-          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-6 h-16 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_25px_rgba(249,115,22,0.6)]" />
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-6 h-16 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
           <h2 className="text-3xl md:text-4xl font-bold text-white pt-8 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
             Our Services
@@ -41,7 +50,7 @@ export function ServicesGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {services.map((s, i) => {
+          {displayedServices.map((s, i) => {
             const Icon = s.icon
             return (
               <div
@@ -79,6 +88,14 @@ export function ServicesGrid() {
             )
           })}
         </div>
+
+        {showViewAll && (
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg" className="bg-transparent text-orange-400 border-orange-400 hover:bg-orange-400 hover:text-black">
+              <Link href="/services">View All Services</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   )

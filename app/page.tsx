@@ -20,7 +20,7 @@ export default function HomePage() {
       <HeroSection />
       <ServicesSlider />
       <IndustryExpertiseSection />
-      <ServicesGrid />
+      <ServicesGrid limit={4} showViewAll={true} />
       <ProductsSection />
       <WhatSetsUsApartSection />
       <WhyChooseUs />
