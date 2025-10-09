@@ -3,53 +3,55 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Code, Shield, Database, Brain } from "lucide-react"
 import { PartnersSection } from "@/components/partners-section"
 import { TeamSection } from "@/components/team-section"
+import { BonjourSection } from "@/components/bonjour-section"
+import Image from "next/image"
 
 const expertiseAreas = [
   {
     title: "CYBERSECURITY",
     icon: Shield,
     features: [
-      "Threat Intelligence & Analysis",
-      "Penetration Testing",
-      "Security Audits & Compliance",
       "Incident Response",
-      "Security Training Programs",
+      "Penetration Testing",
       "24/7 Security Monitoring",
+      "Security Training Programs",
+      "Security Audits & Compliance",
+      "Threat Intelligence & Analysis",
     ],
   },
   {
-    title: "SOFTWARE DEVELOPMENT",
+    title: "DEVELOPMENT",
     icon: Code,
     features: [
-      "Custom Web Applications",
-      "Mobile App Development",
-      "API Development & Integration",
-      "Cloud-Native Solutions",
       "DevOps Implementation",
+      "Cloud-Native Solutions",
+      "Mobile App Development",
+      "Custom Web Applications",
       "Quality Assurance Testing",
+      "API Development & Integration",
     ],
   },
   {
     title: "DATA SOLUTIONS",
     icon: Database,
     features: [
-      "Business Intelligence Platforms",
       "Data Warehousing",
       "Analytics & Reporting",
       "Database Optimization",
       "Data Migration Services",
       "Real-time Data Processing",
+      "Business Intelligence Platforms",
     ],
   },
   {
     title: "AI INTEGRATION",
     icon: Brain,
     features: [
-      "Machine Learning Models",
-      "Natural Language Processing",
-      "Computer Vision Solutions",
       "Predictive Analytics",
       "AI-Powered Automation",
+      "Machine Learning Models",
+      "Computer Vision Solutions",
+      "Natural Language Processing",
       "Intelligent Decision Systems",
     ],
   },
@@ -73,6 +75,7 @@ const portfolioProjects = [
     subtitle: "Secure Financial App",
     description: "Cross-platform banking solution with biometric security",
     size: "medium",
+    id: "mobile-banking"
   },
   {
     title: "HEALTHCARE SYSTEM",
@@ -102,61 +105,18 @@ export default function AboutPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative py-20">
         {/* Hero Section */}
-        <div className="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="absolute -top-4 left-0 w-1 h-20 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.5)]" />
-
-            <div className="pl-8">
-              <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-                HELLO!
-              </h1>
-              <p className="text-orange-400 text-xl mb-2">WE ARE A PROFESSIONAL TECHNOLOGY COMPANY</p>
-              <p className="text-gray-300 text-lg mb-8">BRINGING INNOVATION TO BUSINESSES THROUGH THE LENS</p>
-
-              <div className="w-32 h-1 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 mb-8 shadow-[0_0_12px_rgba(249,115,22,0.5)]" />
-
-              <Button
-                asChild
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white rounded-md px-8 py-3 font-semibold border-2 border-orange-400 hover:border-orange-300 shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all"
-              >
-                <a href="#contact">GET STARTED</a>
-              </Button>
-
-              {/* Social Icons */}
-              <div className="flex gap-4 mt-8">
-                <div className="w-8 h-8 border-2 border-orange-500 rounded-full flex items-center justify-center text-orange-400 hover:bg-orange-500 hover:text-white transition-all cursor-pointer">
-                  <span className="text-sm">@</span>
-                </div>
-                <div className="w-8 h-8 border-2 border-orange-500 rounded-full flex items-center justify-center text-orange-400 hover:bg-orange-500 hover:text-white transition-all cursor-pointer">
-                  <span className="text-sm">f</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Image Placeholder */}
-          <div className="relative">
-            <div className="w-full h-96 bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/30 rounded-2xl flex items-center justify-center relative overflow-hidden hover:border-orange-500/50 transition-colors">
-              <div className="absolute top-2 right-2 w-12 h-12 border-r-2 border-t-2 border-orange-400/50" />
-              <div className="absolute bottom-2 left-2 w-10 h-10 border-l-2 border-b-2 border-orange-600/40" />
-
-              <div className="text-center text-gray-500">
-                <div className="text-lg font-medium mb-2">Team Photo Placeholder</div>
-                <div className="text-sm">400x600px recommended</div>
-              </div>
-            </div>
-
-            {/* Decorative polaroid-style cards */}
-            <div className="absolute bottom-8 -left-16 w-20 h-24 bg-white border-4 border-white rounded-sm shadow-lg overflow-hidden">
-              <div className="w-full h-16 bg-gray-300"></div>
-              <div className="p-1 text-xs text-gray-600">Success</div>
-            </div>
-            <div className="absolute top-8 -right-16 w-20 h-24 bg-white border-4 border-white rounded-sm shadow-lg overflow-hidden">
-              <div className="w-full h-16 bg-gray-300"></div>
-              <div className="p-1 text-xs text-gray-600">Innovation</div>
-            </div>
-          </div>
-        </div>
+        <BonjourSection 
+          title="Bonjour!" 
+          subtitle="WE ARE A TECHNOLOGY COMPANY" 
+          description={<>
+              BRINGING INNOVATION TO BUSINESSES
+              <br />
+              THROUGH THE LENS
+            </>
+          }
+          imageUrl="https://i.postimg.cc/zBSJBp2H/Corporate-Team-Meeting-1.jpg"
+          imageAlt="Team Photo"
+        />
 
         {/* About Us Section */}
         <div className="mb-20">
@@ -176,28 +136,20 @@ export default function AboutPage() {
             <div className="lg:col-span-2">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Large Image Placeholder */}
-                <div className="w-full h-80 bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/30 rounded-lg flex items-center justify-center relative overflow-hidden hover:border-orange-500/50 transition-colors">
-                  <div className="absolute top-2 left-2 w-8 h-8 border-l-2 border-t-2 border-orange-400/50" />
-                  <div className="absolute bottom-2 right-2 w-8 h-8 border-r-2 border-b-2 border-orange-600/40" />
-
-                  <div className="text-center text-gray-500">
-                    <div className="text-lg font-medium mb-2">Company Image</div>
-                    <div className="text-sm">300x400px</div>
-                  </div>
-                </div>
+                <Image src="https://i.postimg.cc/dVyDFRF0/Corporate-Team-Meeting.jpg" alt="Company Image" width={500} height={432} className="w-full h-[432px] object-cover rounded-lg border-2 border-orange-500/30" />
 
                 {/* Company Description */}
                 <div className="space-y-4">
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-justify text-sm">
                     MiliTech Solutions stands as a premier technology company, delivering cutting-edge solutions that
                     transform businesses across industries. Our expertise spans cybersecurity, software development, and
                     AI integration.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-justify text-sm">
                     With over a decade of experience, we've successfully completed 240+ projects, serving government,
                     defense, and private sectors with innovative technology solutions that drive digital transformation.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-justify text-sm">
                     Our commitment to excellence and innovation has established us as a trusted partner for
                     organizations seeking reliable, scalable, and secure technology implementations.
                   </p>
@@ -206,27 +158,19 @@ export default function AboutPage() {
                     asChild
                     className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white rounded-md px-6 py-2 font-semibold border border-orange-400 hover:border-orange-300 shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all mt-6"
                   >
-                    <a href="#contact">ABOUT & EXPERIENCE</a>
+                    <a href="#mobile-banking">ABOUT & EXPERIENCE</a>
                   </Button>
                 </div>
               </div>
             </div>
 
             {/* Team Info Image Placeholder */}
-            <div className="w-full h-64 bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/30 rounded-lg flex items-center justify-center relative overflow-hidden hover:border-orange-500/50 transition-colors">
-              <div className="absolute top-2 right-2 w-6 h-6 border-r border-t border-orange-400/50" />
-              <div className="absolute bottom-2 left-2 w-6 h-6 border-l border-b border-orange-600/40" />
-
-              <div className="text-center text-gray-500">
-                <div className="text-lg font-medium mb-2">Team Photo</div>
-                <div className="text-sm">250x320px</div>
-              </div>
-            </div>
+            <Image src="https://i.postimg.cc/mrfz11Dw/Team-Meeting-Discussion.jpg" alt="Team Photo" width={500} height={256} className="w-full h-64 object-cover rounded-lg border-2 border-orange-500/30" />
           </div>
         </div>
 
         {/* Portfolio/Success Stories Section */}
-        <div className="mb-20">
+        <div id="success-stories" className="mb-20">
           <div className="relative mb-12">
             <div className="absolute left-0 top-0 w-1 h-16 bg-gradient-to-b from-orange-600 to-orange-400 shadow-[0_0_15px_rgba(249,115,22,0.5)]" />
 
@@ -243,8 +187,13 @@ export default function AboutPage() {
             {portfolioProjects.map((project, index) => (
               <Card
                 key={index}
+                id={project.id}
                 className={`group bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 hover:border-orange-500/50 transition-all hover:shadow-[0_0_25px_rgba(249,115,22,0.15)] relative overflow-hidden ${
-                  project.size === "large" ? "md:col-span-2 h-64" : project.size === "medium" ? "h-48" : "h-40"
+                  project.size === "large"
+                    ? "md:col-span-2 h-64"
+                    : project.size === "medium"
+                    ? "h-52"
+                    : "h-52"
                 }`}
               >
                 {/* Corner accents */}
@@ -280,7 +229,7 @@ export default function AboutPage() {
             <div className="absolute left-0 top-0 w-1 h-16 bg-gradient-to-b from-orange-700 to-orange-500 shadow-[0_0_15px_rgba(194,65,12,0.5)]" />
 
             <div className="pl-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-.shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                 EXPERTISE AREAS
               </h2>
               <div className="w-32 h-1 bg-gradient-to-r from-orange-700 via-orange-500 to-orange-400 shadow-[0_0_12px_rgba(194,65,12,0.5)]" />
@@ -293,13 +242,13 @@ export default function AboutPage() {
               return (
                 <Card
                   key={index}
-                  className="group bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 hover:border-orange-500 transition-all hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] relative overflow-hidden"
+                  className="group bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 hover:border-orange-500 transition-all hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] relative overflow-hidden flex flex-col"
                 >
                   {/* Enhanced orange accents */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-600/40 via-orange-400/60 to-orange-500/40 group-hover:from-orange-600 group-hover:via-orange-400 group-hover:to-orange-500 transition-colors" />
                   <div className="absolute top-2 right-2 w-8 h-8 border-r-2 border-t-2 border-orange-400/50 group-hover:border-orange-400 transition-colors" />
 
-                  <CardContent className="p-6 text-center relative">
+                  <CardContent className="p-6 text-center relative flex flex-col flex-grow">
                     <Icon className="h-12 w-12 text-orange-500 mx-auto mb-4 drop-shadow-[0_0_15px_rgba(249,115,22,0.6)] group-hover:drop-shadow-[0_0_25px_rgba(249,115,22,0.8)] transition-all" />
 
                     <h3 className="text-xl font-bold text-white group-hover:text-orange-50 mb-4 transition-colors">
@@ -308,7 +257,7 @@ export default function AboutPage() {
 
                     <div className="w-12 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto mb-6 shadow-[0_0_8px_rgba(249,115,22,0.4)]" />
 
-                    <ul className="space-y-2 mb-8 text-left">
+                    <ul className="space-y-2 mb-8 text-left flex-grow">
                       {area.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
@@ -322,7 +271,7 @@ export default function AboutPage() {
 
                     <Button
                       asChild
-                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white rounded-md font-semibold border border-orange-400 hover:border-orange-300 shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)] transition-all"
+                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white rounded-md font-semibold border border-orange-400 hover:border-orange-300 shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)] transition-all mt-auto"
                     >
                       <a href="#contact">GET STARTED</a>
                     </Button>

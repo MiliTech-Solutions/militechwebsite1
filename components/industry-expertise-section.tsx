@@ -40,7 +40,7 @@ export function IndustryExpertiseSection() {
             return (
               <div
                 key={idx}
-                className="group rounded-xl border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.2)] transition-all p-8 text-center relative overflow-hidden"
+                className="group rounded-xl border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.2)] transition-all p-8 text-center relative overflow-hidden flex flex-col"
               >
                 {/* Enhanced orange accent elements with full spectrum */}
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-600/40 via-orange-400/60 to-orange-500/40 group-hover:from-orange-600 group-hover:via-orange-400 group-hover:to-orange-500 transition-colors" />
@@ -48,14 +48,14 @@ export function IndustryExpertiseSection() {
 
                 <div className="absolute top-2 right-2 w-8 h-8 border-r-2 border-t-2 border-orange-400/50 group-hover:border-orange-400 transition-colors shadow-[0_0_10px_rgba(249,115,22,0.2)]" />
                 <div className="absolute bottom-2 left-2 w-6 h-6 border-l border-b border-orange-600/40 group-hover:border-orange-600 transition-colors" />
+                <div className="flex-grow">
+                  <Icon className="h-8 w-8 text-gray-200 group-hover:text-orange-400 mx-auto mb-4 transition-all drop-shadow-[0_0_10px_rgba(249,115,22,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
 
-                <Icon className="h-8 w-8 text-gray-200 group-hover:text-orange-400 mx-auto mb-4 transition-all drop-shadow-[0_0_10px_rgba(249,115,22,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
+                  <div className="w-10 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto mb-3 shadow-[0_0_8px_rgba(249,115,22,0.4)]" />
+                  <div className="w-6 h-0.5 bg-gradient-to-r from-orange-300 to-orange-700 mx-auto mb-3" />
 
-                <div className="w-10 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto mb-3 shadow-[0_0_8px_rgba(249,115,22,0.4)]" />
-                <div className="w-6 h-0.5 bg-gradient-to-r from-orange-300 to-orange-700 mx-auto mb-3" />
-
-                <h3 className="font-semibold text-white group-hover:text-orange-50 transition-colors">{it.title}</h3>
-
+                  <h3 className="font-semibold text-white group-hover:text-orange-50 transition-colors">{it.title}</h3>
+                </div>
                 <a
                   href="#contact"
                   className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm mt-4 border-b-2 border-orange-500/40 hover:border-orange-400 transition-all pb-1 group/link"

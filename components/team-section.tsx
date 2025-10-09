@@ -4,19 +4,19 @@ import { Button } from "@/components/ui/button"
 
 const teamMembers = [
   {
-    name: "Sarah Johnson",
+    name: "Ali Kayani",
     role: "Chief Executive Officer",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in defense technology. Sarah drives strategic initiatives and oversees company operations with expertise in cybersecurity and government contracts.",
-    image: "/professional-woman-ceo-in-business-suit.jpg",
+    image: "https://i.postimg.cc/j2rf8QY4/C-E-O.png",
     specialties: ["Strategic Planning", "Defense Contracts", "Team Leadership"],
   },
   {
-    name: "Michael Chen",
+    name: "Umar Waqar",
     role: "Chief Technology Officer",
     department: "Engineering",
     bio: "Technology innovator specializing in AI and machine learning solutions. Michael leads our technical vision and ensures cutting-edge implementation across all projects.",
-    image: "/professional-man-cto-with-glasses-in-tech-environm.jpg",
+    image: "https://i.postimg.cc/rpSYnjBp/midjourney.jpg",
     specialties: ["AI/ML", "System Architecture", "Innovation"],
   },
 ]
@@ -24,38 +24,38 @@ const teamMembers = [
 const testimonials = [
   {
     name: "Jennifer Martinez",
-    role: "Defense Contractor",
+    role: "Def Contractor",
     content:
       "MiliTech's cybersecurity solutions exceeded our expectations. Their team delivered robust protection systems that enhanced our operational security by 300%.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "https://i.postimg.cc/9f1VT1H1/C_F_O.png",
   },
   {
-    name: "Robert Kim",
+    name: "Kim Robert",
     role: "IT Director",
     content:
       "The AI-powered analytics platform provided insights we never thought possible. Implementation was seamless and results were immediate.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "https://i.postimg.cc/PJ7YhGgW/A_Look_That_Captivates.jpg",
   },
   {
     name: "Lisa Thompson",
     role: "Security Chief",
     content:
       "Outstanding threat detection capabilities. Their proactive approach to cybersecurity has kept our systems secure for over two years.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "https://i.postimg.cc/QNRcTJb4/86bddd2c-372c-499e-b02b-1aa8b91abc40.jpg",
   },
   {
     name: "David Wilson",
-    role: "Operations Manager",
+    role: "Oper Manager",
     content:
       "MiliTech's cloud migration strategy reduced our infrastructure costs by 35% while improving performance significantly.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "https://i.postimg.cc/Z5y1NNxZ/1cf2784d-c9cc-4451-a20c-e947debf713a.jpg",
   },
   {
-    name: "Amanda Foster",
+    name: "Amanda Stevenson",
     role: "CTO",
     content:
       "Their expertise in defense technology is unmatched. The solutions they provided transformed our entire operational framework.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "https://i.postimg.cc/HL9v09JP/a8619ba2-d131-49cd-b28e-3a213296473a.jpg",
   },
 ]
 
@@ -78,9 +78,10 @@ export function TeamSection() {
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500/30">
                 <img
-                  src="/professional-woman-ceo-in-business-suit.jpg"
+                  src="https://i.postimg.cc/j2rf8QY4/C-E-O.png"
                   alt="Sarah Johnson"
                   className="w-full h-full object-cover"
+                   style={{ objectPosition: 'center 10%' }}
                 />
               </div>
               <div className="absolute -top-4 -left-4 px-3 py-1 bg-orange-500/20 border border-orange-500/50 rounded text-orange-300 text-sm">
@@ -91,8 +92,8 @@ export function TeamSection() {
             {/* Center Logo/Brand */}
             <div className="text-center relative">
               <div className="relative inline-block">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-orange-600 to-orange-400 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(249,115,22,0.3)]">
-                  <span className="text-white font-bold text-2xl">MT</span>
+                <div className="w-24 h-24 mx-auto mb-4 bg-black rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+                  <img src="https://i.postimg.cc/BQBVqjjP/Mili-Tech-Logo-4-0-Transparent.png" alt="MiliTech Logo" className="w-20 h-20" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">MILITECH</h1>
                 <p className="text-orange-400 text-lg mb-4">Overcome challenges and increase your success</p>
@@ -106,13 +107,14 @@ export function TeamSection() {
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500/30">
                 <img
-                  src="/professional-man-cto-with-glasses-in-tech-environm.jpg"
+                  src="https://i.postimg.cc/P57S0j4S/WhatsApp_Image_2025-09-15_at_5.25.25_PM_(2).jpg"
                   alt="Michael Chen"
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 20%' }}
                 />
               </div>
               <div className="absolute -top-4 -right-4 px-3 py-1 bg-orange-500/20 border border-orange-500/50 rounded text-orange-300 text-sm">
-                CTO & CO-FOUNDER
+                CFO & CO-FOUNDER
               </div>
             </div>
           </div>
@@ -128,19 +130,19 @@ export function TeamSection() {
                 title: "THE BEGINNING",
                 subtitle: "Foundation & Strategy",
                 description: "Learn the fundamentals of defense technology and strategic planning",
-                image: "/silhouette-figure-standing.jpg",
+                image: "https://i.postimg.cc/VLxShZtJ/anastasia-zhenina-E4XARZNDjzI-unsplash.jpg",
               },
               {
                 title: "THE METHOD",
                 subtitle: "Implementation & Process",
                 description: "Master our proven methodologies for cybersecurity and system integration",
-                image: "/gear-mechanism-technology.jpg",
+                image: "https://i.postimg.cc/T3Z88SqP/The-First-Step-to-a-High-Performance-Morning-Routine.jpg",
               },
               {
                 title: "THE END",
                 subtitle: "Results & Success",
                 description: "Achieve measurable outcomes and sustainable security solutions",
-                image: "/success-achievement-figure.jpg",
+                image: "https://i.postimg.cc/XqFLCHBt/Building-Positive-Habits-5-Steps-to-Success.jpg",
               },
             ].map((item, index) => (
               <Card
@@ -170,9 +172,9 @@ export function TeamSection() {
             <div className="relative">
               <div className="border-2 border-orange-500/50 rounded-lg p-6 bg-gradient-to-br from-gray-900/50 to-black/50">
                 <h3 className="text-orange-400 font-bold text-xl mb-4">
-                  Let's see how successful you can be with our expertise
+                  Let's see how successful <br /> You can be with our expertise
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed text-justify">
                   Our comprehensive approach to defense technology combines cutting-edge innovation with proven
                   methodologies. We've helped organizations achieve unprecedented levels of security and operational
                   efficiency through our tailored solutions and expert guidance.
@@ -187,7 +189,7 @@ export function TeamSection() {
             <div className="relative">
               <div className="w-80 h-80 mx-auto relative">
                 <img
-                  src="/professional-pointing-forward-with-geometric-eleme.jpg"
+                  src="https://i.postimg.cc/Dy0sHYzX/Business-Meeting-in-Office-with-Corporate-Manager-Portrait.jpg"
                   alt="Expert pointing forward"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -208,7 +210,7 @@ export function TeamSection() {
                 <span className="text-orange-400">■</span> Who is this for?
               </h2>
 
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-300 text-justify">
                 <p>
                   Our solutions are designed for defense contractors, government agencies, and enterprise organizations
                   seeking advanced cybersecurity and technology solutions.
@@ -232,23 +234,33 @@ export function TeamSection() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg">MILITECH</h3>
-                    <p className="text-orange-400 text-sm">Defense Technology Solutions</p>
+                    <p className="text-orange-400 text-sm">Innovative Defense Technologies</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
                     <img
-                      src="/professional-woman-ceo-in-business-suit.jpg"
+                      src="https://i.postimg.cc/j2rf8QY4/C-E-O.png"
                       alt="Team member"
                       className="w-full h-full object-cover"
+                       style={{ objectPosition: 'center 10%' }}
                     />
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
                     <img
-                      src="/professional-man-cto-with-glasses-in-tech-environm.jpg"
+                      src="https://i.postimg.cc/P57S0j4S/WhatsApp_Image_2025-09-15_at_5.25.25_PM_(2).jpg"
                       alt="Team member"
                       className="w-full h-full object-cover"
+                      style={{ objectPosition: 'center 20%' }}
+                    />
+                  </div>
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
+                    <img
+                      src="https://i.postimg.cc/rpSYnjBp/midjourney.jpg"
+                      alt="Team member"
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: 'center 20%' }}
                     />
                   </div>
                 </div>
@@ -263,22 +275,35 @@ export function TeamSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-gradient-to-br from-orange-500 to-orange-600 border-0 text-black">
-                <CardContent className="p-6">
+              <Card key={index} className="bg-gradient-to-br from-orange-500 to-orange-600 border-0 text-black flex flex-col">
+                <CardContent className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full overflow-hidden bg-orange-700">
                       <img
                         src={testimonial.avatar || "/placeholder.svg"}
                         alt={testimonial.name}
                         className="w-full h-full object-cover"
+                        style={{
+                          objectPosition: 
+                            testimonial.name === "Jennifer Martinez" ||
+                            testimonial.name === "Lisa Thompson" ||
+                            testimonial.name === "David Wilson" ||
+                            testimonial.name === "Amanda Stevenson"
+                              ? "center 20%"
+                              : "center",
+                        }}
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm">{testimonial.name}</h4>
+                      <h4 className="font-bold text-sm">
+                        {testimonial.name.split(' ')[0]}
+                        <br />
+                        {testimonial.name.split(' ')[1]}
+                      </h4>
                       <p className="text-xs opacity-80">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-sm leading-relaxed">{testimonial.content}</p>
+                  <p className="text-sm leading-relaxed text-justify flex-grow">{testimonial.content}</p>
                 </CardContent>
               </Card>
             ))}
@@ -302,6 +327,7 @@ export function TeamSection() {
                         src={member.image || "/placeholder.svg"}
                         alt={member.name}
                         className="w-full h-full object-cover"
+                        style={member.name === "Umar Waqar" ? { objectPosition: "center 20%" } : { objectPosition: "center 10%" }}
                       />
                     </div>
 
@@ -362,7 +388,7 @@ export function TeamSection() {
         {/* Final brand mark */}
         <div className="text-center mt-12">
           <div className="text-orange-400 font-bold text-sm tracking-wider">MILITECH</div>
-          <div className="text-gray-500 text-xs mt-1">DEFENSE TECHNOLOGY SOLUTIONS</div>
+          <p className="text-gray-500 text-xs mt-1">DEFENSE TECHNOLOGY SOLUTIONS</p>
         </div>
       </div>
     </div>
