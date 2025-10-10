@@ -68,7 +68,7 @@ export function HeroSection() {
           <div
             className="w-full h-full border-l border-gray-800 hover:border-orange-500/50 transition-all hover:shadow-[0_0_40px_rgba(249,115,22,0.2)] flex items-center justify-center relative overflow-hidden"
             style={{
-              backgroundImage: "url('https://i.postimg.cc/cJLK3df8/5ce559177078cd244f889b1ca5d1ec53.jpg')",
+              backgroundImage: "url('https://i.postimg.cc/xjNJs6tW/IMG-20251010-025340.jpg')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

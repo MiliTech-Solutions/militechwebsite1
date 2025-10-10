@@ -66,7 +66,7 @@ export function BonjourSection({ title, subtitle, description, imageUrl, imageAl
 
       {/* Hero Image Placeholder */}
       <div className="relative">
-        <Image src={imageUrl} alt={imageAlt} width={500} height={400} className="w-full h-96 object-cover rounded-2xl border-2 border-orange-500/30" />
+        <Image src={imageUrl} alt={imageAlt} width={500} height={400} className="w-full h-96 object-cover object-left rounded-2xl border-2 border-orange-500/30" />
       </div>
     </div>
   );

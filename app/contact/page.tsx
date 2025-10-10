@@ -106,7 +106,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-orange-500 mr-3" />
                     <div>
                       <h3 className="text-white font-semibold">Email</h3>
-                      <p className="text-gray-300">info@inotechsoln.com</p>
+                      <p className="text-gray-300">contact@militech.app</p>
                     </div>
                   </div>
                 </CardContent>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-orange-500 mr-3" />
                     <div>
                       <h3 className="text-white font-semibold">Phone</h3>
-                      <p className="text-gray-300">051-8778995</p>
+                      <p className="text-gray-300">(+92) 370 977 5882</p>
                     </div>
                   </div>
                 </CardContent>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                     <Clock className="h-6 w-6 text-orange-500 mr-3" />
                     <div>
                       <h3 className="text-white font-semibold">Working Hours</h3>
-                      <p className="text-gray-300">Mon to Fri, 09:00 – 18:00</p>
+                      <p className="text-gray-300">Mon to Fri</p>
                     </div>
                   </div>
                 </CardContent>
