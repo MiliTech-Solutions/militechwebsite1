@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Youtube, Facebook, Instagram } from "lucide-react";
 import Image from 'next/image';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface BonjourProps {
   title: string;

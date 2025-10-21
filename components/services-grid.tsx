@@ -13,7 +13,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 const services = [
   { 
