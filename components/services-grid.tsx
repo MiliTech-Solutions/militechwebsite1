@@ -1,3 +1,5 @@
+'use client';
+
 import { Shield, Lock, Eye, Database, Users, BadgeCheck, Globe, Target, Code, Server } from "lucide-react"
 import Link from "next/link"
 import Image from 'next/image';
@@ -11,6 +13,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const services = [
   { 
@@ -92,9 +95,10 @@ interface ServicesGridProps {
 
 export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) {
   const displayedServices = limit ? services.slice(0, limit) : services;
+  const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section id="services" className="py-20 bg-black relative overflow-hidden">
+    <section ref={ref} id="services" className="py-20 bg-black relative overflow-hidden">
       {/* Enhanced orange separators and accent lines */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-800/30 via-orange-500 to-orange-300/50 shadow-[0_0_20px_rgba(249,115,22,0.3)]" />
       <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-orange-800/15 via-orange-500/25 to-orange-300/20 blur-sm" />
@@ -108,7 +112,7 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
         <div className="absolute bottom-12 right-4 w-40 h-1 bg-gradient-to-l from-orange-500 to-orange-700 shadow-[0_0_15px_rgba(234,88,12,0.5)]" />
         <div className="absolute bottom-14 right-10 w-24 h-0.5 bg-gradient-to-l from-orange-300 to-orange-600" />
 
-        <div className="text-center mb-12 relative">
+        <div className={`text-center mb-12 relative ${isIntersecting ? 'services-slide-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_25px_rgba(249,115,22,0.6)]" />
           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-6 h-16 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
@@ -133,7 +137,8 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
             return (
               <div
                 key={i}
-                className="group rounded-lg border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black hover:bg-gradient-to-br hover:from-orange-950/20 hover:to-orange-900/10 hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] transition-all p-8 relative overflow-hidden"
+                className={`group rounded-lg border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black hover:bg-gradient-to-br hover:from-orange-950/20 hover:to-orange-900/10 hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] transition-all p-8 relative overflow-hidden ${isIntersecting ? 'services-slide-in' : 'opacity-0'}`}
+                style={{ animationDelay: `${0.2 * (i + 1)}s` }}
               >
                 {/* Enhanced orange accent elements */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-600/40 via-orange-400/60 to-orange-500/40 group-hover:from-orange-600 group-hover:via-orange-400 group-hover:to-orange-500 transition-colors" />
@@ -184,7 +189,7 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
         </div>
 
         {showViewAll && (
-          <div className="text-center mt-12">
+          <div className={`text-center mt-12 ${isIntersecting ? 'services-slide-in' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
             <Button asChild variant="outline" size="lg" className="bg-transparent text-orange-400 border-orange-400 hover:bg-orange-400 hover:text-black">
               <Link href="/services">View All Services</Link>
             </Button>

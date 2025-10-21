@@ -26,7 +26,7 @@ const testimonials = [
     name: "Jennifer Martinez",
     role: "Def Contractor",
     content:
-      "MiliTech's cybersecurity solutions exceeded our expectations. Their team delivered robust protection systems that enhanced our operational security by 300%.",
+      "MiliTech\'s cybersecurity solutions exceeded our expectations. Their team delivered robust protection systems that enhanced our operational security by 300%.",
     avatar: "https://i.postimg.cc/9f1VT1H1/C_F_O.png",
   },
   {
@@ -47,7 +47,7 @@ const testimonials = [
     name: "David Wilson",
     role: "Oper Manager",
     content:
-      "MiliTech's cloud migration strategy reduced our infrastructure costs by 35% while improving performance significantly.",
+      "MiliTech\'s cloud migration strategy reduced our infrastructure costs by 35% while improving performance significantly.",
     avatar: "https://i.postimg.cc/Z5y1NNxZ/1cf2784d-c9cc-4451-a20c-e947debf713a.jpg",
   },
   {
@@ -120,7 +120,7 @@ export function TeamSection() {
           </div>
         </div>
 
-        {/* What You'll Learn Section */}
+        {/* What You\'ll Learn Section */}
         <div className="mb-20 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">What will you learn from our expertise?</h2>
 
@@ -172,11 +172,11 @@ export function TeamSection() {
             <div className="relative">
               <div className="border-2 border-orange-500/50 rounded-lg p-6 bg-gradient-to-br from-gray-900/50 to-black/50">
                 <h3 className="text-orange-400 font-bold text-xl mb-4">
-                  Let's see how successful <br /> You can be with our expertise
+                  Let\'s see how successful <br /> You can be with our expertise
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed text-justify">
                   Our comprehensive approach to defense technology combines cutting-edge innovation with proven
-                  methodologies. We've helped organizations achieve unprecedented levels of security and operational
+                  methodologies. We\'ve helped organizations achieve unprecedented levels of security and operational
                   efficiency through our tailored solutions and expert guidance.
                 </p>
               </div>
@@ -216,7 +216,7 @@ export function TeamSection() {
                   seeking advanced cybersecurity and technology solutions.
                 </p>
                 <p>
-                  Whether you're looking to enhance your security posture, implement AI-driven analytics, or modernize
+                  Whether you\'re looking to enhance your security posture, implement AI-driven analytics, or modernize
                   your infrastructure, our team has the expertise to guide you.
                 </p>
                 <p>
@@ -344,9 +344,6 @@ export function TeamSection() {
                 <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                   <div className="flex items-center gap-4 mb-4">
                     <h3 className="text-2xl font-bold text-white">{member.name}</h3>
-                    <div className="w-6 h-6 bg-orange-500 rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs">■</span>
-                    </div>
                   </div>
 
                   <p className="text-orange-400 font-semibold mb-2">{member.role}</p>
