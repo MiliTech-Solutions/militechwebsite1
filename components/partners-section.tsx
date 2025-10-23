@@ -47,8 +47,8 @@ export function PartnersSection() {
               <Image
                 src={p.logo || "/placeholder.svg"}
                 alt={p.name}
-                width={i === 1 ? 110 : i === 2 ? 110 : i === 7 ? 80 : i === 3 ? 100 : 120}
-                height={i === 1 ? 70 : i === 2 ? 70 : i === 7 ? 40 : i === 3 ? 60 : 80}
+                width={i === 1 ? 105 : i === 2 ? 110 : i === 7 ? 80 : i === 3 ? 100 : 120}
+                height={i === 1 ? 65 : i === 2 ? 70 : i === 7 ? 40 : i === 3 ? 60 : 80}
                 className="opacity-80 hover:opacity-100 transition-opacity filter group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.3)] object-contain"
               />
 

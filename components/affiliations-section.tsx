@@ -39,8 +39,9 @@ export function AffiliationsSection() {
           {affiliations.map((a, i) => (
             <Card
               key={i}
-              className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] transition-all relative overflow-hidden group"
-            >
+              className={`bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] transition-all relative overflow-hidden group ${
+                i === 1 ? "transform scale-95" : ""
+              }`}>
               {/* FIXED: Changed from cyan to orange theme */}
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-600/40 via-orange-400/60 to-orange-500/40 group-hover:from-orange-600 group-hover:via-orange-400 group-hover:to-orange-500 transition-colors" />
               <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-orange-600/20 via-orange-400/30 to-orange-500/20 blur-sm" />
