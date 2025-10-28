@@ -35,7 +35,7 @@ export function BonjourSection({ title, subtitle, description, imageUrl, imageAl
               asChild
               className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white rounded-md px-8 py-3 font-semibold border-2 border-orange-400 hover:border-orange-300 shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all"
             >
-              <a href="#contact">GET STARTED</a>
+              <a href="/#contact">GET STARTED</a>
             </Button>
           </div>
 

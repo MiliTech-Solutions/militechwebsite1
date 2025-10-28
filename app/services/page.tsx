@@ -1,5 +1,13 @@
-import { ServicesGrid } from "@/components/services-grid"
-import { BonjourSection } from "@/components/bonjour-section"
+import dynamic from 'next/dynamic'
+
+const BonjourSection = dynamic(() => import('@/components/bonjour-section').then(mod => mod.BonjourSection), { 
+  ssr: false,
+  loading: () => <div className="h-96 bg-black animate-pulse" />
+})
+const ServicesGrid = dynamic(() => import('@/components/services-grid').then(mod => mod.ServicesGrid), { 
+  ssr: false,
+  loading: () => <div className="h-96 bg-black animate-pulse" />
+})
 
 export default function ServicesPage() {
   return (
@@ -15,7 +23,7 @@ export default function ServicesPage() {
           imageUrl="https://i.postimg.cc/xjNJs6tW/IMG-20251010-025340.jpg"
           imageAlt="Our Services"
         />
-        <ServicesGrid />
+        <ServicesGrid disableAnimation={true} />
       </div>
     </div>
   )
