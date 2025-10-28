@@ -1,6 +1,8 @@
+'use client';
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -26,7 +28,7 @@ const testimonials = [
     name: "Jennifer Martinez",
     role: "Def Contractor",
     content:
-      "MiliTech\'s cybersecurity solutions exceeded our expectations. Their team delivered robust protection systems that enhanced our operational security by 300%.",
+      "MiliTech's cybersecurity solutions exceeded our expectations. Their team delivered robust protection systems that enhanced our operational security by 300%.",
     avatar: "https://i.postimg.cc/9f1VT1H1/C_F_O.png",
   },
   {
@@ -47,7 +49,7 @@ const testimonials = [
     name: "David Wilson",
     role: "Oper Manager",
     content:
-      "MiliTech\'s cloud migration strategy reduced our infrastructure costs by 35% while improving performance significantly.",
+      "MiliTech's cloud migration strategy reduced our infrastructure costs by 35% while improving performance significantly.",
     avatar: "https://i.postimg.cc/Z5y1NNxZ/1cf2784d-c9cc-4451-a20c-e947debf713a.jpg",
   },
   {
@@ -77,9 +79,11 @@ export function TeamSection() {
             {/* Left Leader */}
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500/30">
-                <img
+                <Image
                   src="https://i.postimg.cc/j2rf8QY4/C-E-O.png"
                   alt="Sarah Johnson"
+                  width={192}
+                  height={192}
                   className="w-full h-full object-cover"
                    style={{ objectPosition: 'center 10%' }}
                 />
@@ -93,7 +97,7 @@ export function TeamSection() {
             <div className="text-center relative">
               <div className="relative inline-block">
                 <div className="w-24 h-24 mx-auto mb-4 bg-black rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(249,115,22,0.3)]">
-                  <img src="https://i.postimg.cc/BQBVqjjP/Mili-Tech-Logo-4-0-Transparent.png" alt="MiliTech Logo" className="w-20 h-20" />
+                  <Image src="https://i.postimg.cc/BQBVqjjP/Mili-Tech-Logo-4-0-Transparent.png" alt="MiliTech Logo" width={80} height={80} className="w-20 h-20" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">MILITECH</h1>
                 <p className="text-orange-400 text-lg mb-4">Overcome challenges and increase your success</p>
@@ -106,9 +110,11 @@ export function TeamSection() {
             {/* Right Leader */}
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500/30">
-                <img
+                <Image
                   src="https://i.postimg.cc/P57S0j4S/WhatsApp_Image_2025-09-15_at_5.25.25_PM_(2).jpg"
                   alt="Michael Chen"
+                  width={192}
+                  height={192}
                   className="w-full h-full object-cover"
                   style={{ objectPosition: 'center 20%' }}
                 />
@@ -120,7 +126,7 @@ export function TeamSection() {
           </div>
         </div>
 
-        {/* What You\'ll Learn Section */}
+        {/* What You'll Learn Section */}
         <div className="mb-20 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">What will you learn from our expertise?</h2>
 
@@ -151,9 +157,11 @@ export function TeamSection() {
               >
                 <CardContent className="p-6">
                   <div className="h-32 mb-4 rounded overflow-hidden bg-gradient-to-br from-orange-900/20 to-orange-800/10">
-                    <img
+                    <Image
                       src={item.image || "/placeholder.svg"}
                       alt={item.title}
+                      width={300}
+                      height={128}
                       className="w-full h-full object-cover opacity-70"
                     />
                   </div>
@@ -172,11 +180,11 @@ export function TeamSection() {
             <div className="relative">
               <div className="border-2 border-orange-500/50 rounded-lg p-6 bg-gradient-to-br from-gray-900/50 to-black/50">
                 <h3 className="text-orange-400 font-bold text-xl mb-4">
-                  Let\'s see how successful <br /> You can be with our expertise
+                  Let's see how successful <br /> You can be with our expertise
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed text-justify">
                   Our comprehensive approach to defense technology combines cutting-edge innovation with proven
-                  methodologies. We\'ve helped organizations achieve unprecedented levels of security and operational
+                  methodologies. We've helped organizations achieve unprecedented levels of security and operational
                   efficiency through our tailored solutions and expert guidance.
                 </p>
               </div>
@@ -188,9 +196,11 @@ export function TeamSection() {
 
             <div className="relative">
               <div className="w-80 h-80 mx-auto relative">
-                <img
+                <Image
                   src="https://i.postimg.cc/Dy0sHYzX/Business-Meeting-in-Office-with-Corporate-Manager-Portrait.jpg"
                   alt="Expert pointing forward"
+                  width={320}
+                  height={320}
                   className="w-full h-full object-cover rounded-lg"
                 />
                 {/* Geometric overlay elements */}
@@ -216,7 +226,7 @@ export function TeamSection() {
                   seeking advanced cybersecurity and technology solutions.
                 </p>
                 <p>
-                  Whether you\'re looking to enhance your security posture, implement AI-driven analytics, or modernize
+                  Whether you're looking to enhance your security posture, implement AI-driven analytics, or modernize
                   your infrastructure, our team has the expertise to guide you.
                 </p>
                 <p>
@@ -240,25 +250,31 @@ export function TeamSection() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
-                    <img
+                    <Image
                       src="https://i.postimg.cc/j2rf8QY4/C-E-O.png"
                       alt="Team member"
+                      width={48}
+                      height={48}
                       className="w-full h-full object-cover"
                        style={{ objectPosition: 'center 10%' }}
                     />
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
-                    <img
+                    <Image
                       src="https://i.postimg.cc/P57S0j4S/WhatsApp_Image_2025-09-15_at_5.25.25_PM_(2).jpg"
                       alt="Team member"
+                      width={48}
+                      height={48}
                       className="w-full h-full object-cover"
                       style={{ objectPosition: 'center 20%' }}
                     />
                   </div>
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500/50">
-                    <img
+                    <Image
                       src="https://i.postimg.cc/rpSYnjBp/midjourney.jpg"
                       alt="Team member"
+                      width={48}
+                      height={48}
                       className="w-full h-full object-cover"
                       style={{ objectPosition: 'center 20%' }}
                     />
@@ -279,9 +295,11 @@ export function TeamSection() {
                 <CardContent className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full overflow-hidden bg-orange-700">
-                      <img
+                      <Image
                         src={testimonial.avatar || "/placeholder.svg"}
                         alt={testimonial.name}
+                        width={40}
+                        height={40}
                         className="w-full h-full object-cover"
                         style={{
                           objectPosition: 
@@ -321,11 +339,13 @@ export function TeamSection() {
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
                 <div className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <div className="relative inline-block">
+                  <div className={`relative inline-block ${member.name === "Ali Kayani" ? "lg:pl-22" : ""}`}>
                     <div className="w-80 h-96 rounded-lg overflow-hidden border-4 border-orange-500/50 bg-gradient-to-br from-gray-900 to-black">
-                      <img
+                      <Image
                         src={member.image || "/placeholder.svg"}
                         alt={member.name}
+                        width={320}
+                        height={384}
                         className="w-full h-full object-cover"
                         style={member.name === "Umar Waqar" ? { objectPosition: "center 20%" } : { objectPosition: "center 10%" }}
                       />

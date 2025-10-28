@@ -3,11 +3,11 @@ import { Mail, Phone, Clock } from "lucide-react"
 
 export function Footer() {
   const services = [
-    "Oracle EBS Implementation",
-    "Cybersecurity Services",
-    "Custom Software Development",
-    "Business Intelligence",
-    "Mobile App Development",
+    "A I",
+    "Softwares",
+    "Development",
+    "Cybersecurity",
+    "Mobile Applications",
     "Project Management",
   ]
 
@@ -63,10 +63,10 @@ export function Footer() {
 
             <ul className="space-y-2">
               {[
-                { name: "FACEBOOK", href: "https://www.facebook.com/share/1DGwgmUirP/" },
-                { name: "INSTAGRAM", href: "https://www.instagram.com/militechsoln?igsh=OTVzcWhnZGZ3Ymtw" },
                 { name: "LINKEDIN", href: "https://www.linkedin.com/company/militechsolutions-technology-information-media/" },
                 { name: "YOUTUBE", href: "https://youtube.com/@militech_solutions?si=iZs2MbZo_iI2B-dI" },
+                { name: "FACEBOOK", href: "https://www.facebook.com/share/1DGwgmUirP/" },
+                { name: "INSTAGRAM", href: "https://www.instagram.com/militechsoln?igsh=OTVzcWhnZGZ3Ymtw" },
               ].map((social, i) => (
                 <li key={i}>
                   <a
@@ -89,10 +89,10 @@ export function Footer() {
 
             <ul className="space-y-2">
               {[
-                { label: "Industries", href: "#industries" },
-                { label: "Products", href: "#products" },
-                { label: "Success Stories", href: "#stories" },
                 { label: "Contact", href: "#contact" },
+                { label: "Products", href: "#products" },
+                { label: "Industries", href: "#industries" },
+                { label: "Success Stories", href: "#stories" },
               ].map((link, i) => (
                 <li key={i}>
                   <a
@@ -120,7 +120,7 @@ export function Footer() {
                     href="#services"
                     className="text-gray-300 hover:text-orange-400 transition-colors border-l-2 border-transparent hover:border-orange-500/50 pl-2 group"
                   >
-                    <span className="group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.3)]">{s}</span>
+                    <span className="group-hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.3)] whitespace-nowrap">{s}</span>
                   </Link>
                 </li>
               ))}

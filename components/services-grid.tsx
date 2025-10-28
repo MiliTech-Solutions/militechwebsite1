@@ -14,70 +14,22 @@ import {
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import { useRef } from "react";
 
 const services = [
   { 
     icon: Shield, 
     title: "Threat Intelligence", 
     desc: "Advanced detection and analysis for emerging risks.",
-    imageUrl: "/images/threat-intelligence.jpg",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
     longDesc: "Our Threat Intelligence service provides proactive defense against cyber threats. We leverage cutting-edge technology and expert analysis to monitor the digital landscape for emerging risks, targeted attack campaigns, and malicious actors.\n\nBy gathering and analyzing data from a vast array of sources, we deliver actionable intelligence that empowers you to anticipate and neutralize threats before they impact your organization. This includes detailed reports on threat actors, their tactics, techniques, and procedures (TTPs), and indicators of compromise (IOCs) to bolster your security posture."
   },
   { 
     icon: Lock, 
     title: "Security Consulting", 
     desc: "Strategic guidance from certified experts.",
-    imageUrl: "/images/security-consulting.jpg",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
     longDesc: "Our Security Consulting services offer strategic guidance from a team of certified and experienced cybersecurity experts. We work closely with you to understand your business objectives and security challenges.\n\nOur consulting services cover a wide range of areas, including security strategy development, policy and procedure creation, architecture review, and technology selection. We provide tailored recommendations to help you build a robust and resilient security program that aligns with your business goals and regulatory requirements."
-  },
-  { 
-    icon: Eye, 
-    title: "Incident Response", 
-    desc: "Rapid remediation to restore operations.",
-    imageUrl: "/images/incident-response.jpg",
-    longDesc: "In the event of a security breach, our Incident Response team provides rapid and effective remediation to minimize damage and restore your operations. Our 24/7 response team follows a structured approach to manage incidents from initial detection to post-incident analysis.\n\nWe help you contain the threat, eradicate the attacker\'s presence, recover affected systems, and implement measures to prevent future occurrences. Our goal is to get you back to business as quickly and securely as possible."
-  },
-  { 
-    icon: Database, 
-    title: "Risk Assessment", 
-    desc: "Comprehensive evaluations of your infrastructure.",
-    imageUrl: "/images/risk-assessment.jpg",
-    longDesc: "Our Risk Assessment service provides a comprehensive evaluation of your organization\'s IT infrastructure to identify, quantify, and prioritize security risks. We conduct thorough assessments of your networks, systems, applications, and processes to uncover vulnerabilities and potential threats.\n\nOur detailed reports provide a clear picture of your risk landscape, along with actionable recommendations for mitigation. By understanding your risks, you can make informed decisions about your security investments and strategies."
-  },
-  { 
-    icon: Users, 
-    title: "Security Training", 
-    desc: "Executive briefings and staff programs.",
-    imageUrl: "/images/security-training.jpg",
-    longDesc: "People are a critical part of any security program. Our Security Training services are designed to educate your employees at all levels, from executive briefings on cybersecurity trends and risks to hands-on technical training for your IT staff.\n\nWe offer a variety of training programs, including security awareness training, phishing simulations, and specialized workshops on topics like secure coding and incident response. A well-trained workforce is your first line of defense against cyber attacks."
-  },
-  { 
-    icon: BadgeCheck, 
-    title: "Compliance Management", 
-    desc: "Adherence to standards and regulations.",
-    imageUrl: "/images/compliance-management.jpg",
-    longDesc: "Navigating the complex landscape of cybersecurity regulations and standards can be challenging. Our Compliance Management service helps your organization achieve and maintain adherence to relevant requirements, such as PCI DSS, HIPAA, GDPR, and ISO 27001.\n\nWe assist with gap analysis, policy development, and readiness assessments to prepare you for audits. Our experts provide ongoing support to ensure your compliance program remains effective and up-to-date with evolving regulations."
-  },
-  { 
-    icon: Globe, 
-    title: "Web Analysis", 
-    desc: "In-depth analysis of web applications to identify vulnerabilities.",
-    imageUrl: "/images/web-analysis.jpg",
-    longDesc: "Our Web Analysis service provides an in-depth security assessment of your web applications. We use a combination of automated scanning and manual testing to identify a wide range of vulnerabilities, including those listed in the OWASP Top 10.\n\nOur analysis covers everything from the application\'s architecture and configuration to its input validation and authentication mechanisms. We provide a detailed report of our findings, along with clear guidance on how to remediate the identified vulnerabilities and improve the security of your web applications."
-  },
-  { 
-    icon: Target, 
-    title: "Penetration Testing", 
-    desc: "Simulated attacks to test the security of your systems.",
-    imageUrl: "/images/penetration-testing.jpg",
-    longDesc: "Our Penetration Testing service, also known as ethical hacking, involves simulated attacks on your computer systems, networks, and web applications to evaluate their security. Our certified penetration testers mimic the actions of real-world attackers to identify vulnerabilities that could be exploited.\n\nWe provide a comprehensive report detailing our findings, the potential impact of each vulnerability, and prioritized recommendations for remediation. Penetration testing is an essential practice for proactively assessing and improving your security posture."
-  },
-  { 
-    icon: Code, 
-    title: "Ethical Hacking", 
-    desc: "Authorized hacking attempts to find and fix security flaws.",
-    imageUrl: "/images/ethical-hacking.jpg",
-    longDesc: "Our Ethical Hacking service goes beyond standard penetration testing to provide a more comprehensive and adversarial assessment of your security. Our elite team of ethical hackers uses advanced techniques and a creative mindset to uncover complex vulnerabilities that automated tools and traditional testing methods might miss.\n\nWe conduct authorized, in-depth hacking attempts to provide you with a true understanding of your security resilience. This service is for organizations looking for the highest level of security assurance."
   },
   { 
     icon: Server, 
@@ -86,16 +38,67 @@ const services = [
     imageUrl: "https://i.postimg.cc/NGZTY3Ky/8d3799e24be55bdfddb7a4fd8e4100d0.jpg",
     longDesc: "In today\'s threat landscape, security must be built into the development lifecycle, not bolted on as an afterthought. Our Cyber Development service focuses on building secure and resilient software and systems.\n\nWe follow secure coding best practices and a \'security by design\' approach to develop custom applications, tools, and platforms. Whether you need a secure web application, a custom security tool, or a hardened server environment, our development team has the expertise to deliver solutions that are both functional and highly secure."
   },
+  { 
+    icon: Eye, 
+    title: "Incident Response", 
+    desc: "Rapid remediation to restore operations.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "In the event of a security breach, our Incident Response team provides rapid and effective remediation to minimize damage and restore your operations. Our 24/7 response team follows a structured approach to manage incidents from initial detection to post-incident analysis.\n\nWe help you contain the threat, eradicate the attacker\'s presence, recover affected systems, and implement measures to prevent future occurrences. Our goal is to get you back to business as quickly and securely as possible."
+  },
+  { 
+    icon: Database, 
+    title: "Risk Assessment", 
+    desc: "Comprehensive evaluations of your infrastructure.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "Our Risk Assessment service provides a comprehensive evaluation of your organization\'s IT infrastructure to identify, quantify, and prioritize security risks. We conduct thorough assessments of your networks, systems, applications, and processes to uncover vulnerabilities and potential threats.\n\nOur detailed reports provide a clear picture of your risk landscape, along with actionable recommendations for mitigation. By understanding your risks, you can make informed decisions about your security investments and strategies."
+  },
+  { 
+    icon: Users, 
+    title: "Security Training", 
+    desc: "Executive briefings and staff programs.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "People are a critical part of any security program. Our Security Training services are designed to educate your employees at all levels, from executive briefings on cybersecurity trends and risks to hands-on technical training for your IT staff.\n\nWe offer a variety of training programs, including security awareness training, phishing simulations, and specialized workshops on topics like secure coding and incident response. A well-trained workforce is your first line of defense against cyber attacks."
+  },
+  { 
+    icon: BadgeCheck, 
+    title: "Compliance Management", 
+    desc: "Adherence to standards and regulations.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "Navigating the complex landscape of cybersecurity regulations and standards can be challenging. Our Compliance Management service helps your organization achieve and maintain adherence to relevant requirements, such as PCI DSS, HIPAA, GDPR, and ISO 27001.\n\nWe assist with gap analysis, policy development, and readiness assessments to prepare you for audits. Our experts provide ongoing support to ensure your compliance program remains effective and up-to-date with evolving regulations."
+  },
+  { 
+    icon: Globe, 
+    title: "Web Analysis", 
+    desc: "In-depth analysis of web applications to identify vulnerabilities.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "Our Web Analysis service provides an in-depth security assessment of your web applications. We use a combination of automated scanning and manual testing to identify a wide range of vulnerabilities, including those listed in the OWASP Top 10.\n\nOur analysis covers everything from the application\'s architecture and configuration to its input validation and authentication mechanisms. We provide a detailed report of our findings, along with clear guidance on how to remediate the identified vulnerabilities and improve the security of your web applications."
+  },
+  { 
+    icon: Target, 
+    title: "Penetration Testing", 
+    desc: "Simulated attacks to test the security of your systems.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "Our Penetration Testing service, also known as ethical hacking, involves simulated attacks on your computer systems, networks, and web applications to evaluate their security. Our certified penetration testers mimic the actions of real-world attackers to identify vulnerabilities that could be exploited.\n\nWe provide a comprehensive report detailing our findings, the potential impact of each vulnerability, and prioritized recommendations for remediation. Penetration testing is an essential practice for proactively assessing and improving your security posture."
+  },
+  { 
+    icon: Code, 
+    title: "Ethical Hacking", 
+    desc: "Authorized hacking attempts to find and fix security flaws.",
+    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    longDesc: "Our Ethical Hacking service goes beyond standard penetration testing to provide a more comprehensive and adversarial assessment of your security. Our elite team of ethical hackers uses advanced techniques and a creative mindset to uncover complex vulnerabilities that automated tools and traditional testing methods might miss.\n\nWe conduct authorized, in-depth hacking attempts to provide you with a true understanding of your security resilience. This service is for organizations looking for the highest level of security assurance."
+  }
 ]
 
 interface ServicesGridProps {
   limit?: number;
   showViewAll?: boolean;
+  disableAnimation?: boolean;
 }
 
-export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) {
+export function ServicesGrid({ limit, showViewAll = false, disableAnimation = false }: ServicesGridProps) {
   const displayedServices = limit ? services.slice(0, limit) : services;
-  const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
+  const animationEnabled = !disableAnimation;
+  const [ref, isIntersecting] = animationEnabled ? useIntersectionObserver({ threshold: 0, rootMargin: '-200px 0px 0px 0px' }) : [useRef(null), false];
 
   return (
     <section ref={ref} id="services" className="py-20 bg-black relative overflow-hidden">
@@ -112,7 +115,7 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
         <div className="absolute bottom-12 right-4 w-40 h-1 bg-gradient-to-l from-orange-500 to-orange-700 shadow-[0_0_15px_rgba(234,88,12,0.5)]" />
         <div className="absolute bottom-14 right-10 w-24 h-0.5 bg-gradient-to-l from-orange-300 to-orange-600" />
 
-        <div className={`text-center mb-12 relative ${isIntersecting ? 'services-slide-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+        <div className={`text-center mb-12 relative ${animationEnabled ? (isIntersecting ? 'services-slide-in' : 'opacity-0') : ''}`} style={animationEnabled ? { animationDelay: '0.1s' } : {}}>
           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-gradient-to-b from-orange-400 to-orange-600 shadow-[0_0_25px_rgba(249,115,22,0.6)]" />
           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-6 h-16 bg-gradient-to-b from-orange-400/20 to-orange-600/20 blur-sm" />
 
@@ -137,8 +140,8 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
             return (
               <div
                 key={i}
-                className={`group rounded-lg border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black hover:bg-gradient-to-br hover:from-orange-950/20 hover:to-orange-900/10 hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] transition-all p-8 relative overflow-hidden ${isIntersecting ? 'services-slide-in' : 'opacity-0'}`}
-                style={{ animationDelay: `${0.2 * (i + 1)}s` }}
+                className={`group rounded-lg border-2 border-gray-800 bg-gradient-to-br from-gray-900 to-black hover:bg-gradient-to-br hover:from-orange-950/20 hover:to-orange-900/10 hover:border-orange-500 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] transition-all p-8 relative overflow-hidden ${animationEnabled ? (isIntersecting ? 'services-slide-in' : 'opacity-0') : ''}`}
+                style={animationEnabled ? { animationDelay: `${0.1 * (i + 1)}s` } : {}}
               >
                 {/* Enhanced orange accent elements */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-600/40 via-orange-400/60 to-orange-500/40 group-hover:from-orange-600 group-hover:via-orange-400 group-hover:to-orange-500 transition-colors" />
@@ -189,7 +192,7 @@ export function ServicesGrid({ limit, showViewAll = false }: ServicesGridProps) 
         </div>
 
         {showViewAll && (
-          <div className={`text-center mt-12 ${isIntersecting ? 'services-slide-in' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
+          <div className={`text-center mt-12 ${animationEnabled ? (isIntersecting ? 'services-slide-in' : 'opacity-0') : ''}`} style={animationEnabled ? { animationDelay: '0.3s' } : {}}>
             <Button asChild variant="outline" size="lg" className="bg-transparent text-orange-400 border-orange-400 hover:bg-orange-400 hover:text-black">
               <Link href="/services">View All Services</Link>
             </Button>

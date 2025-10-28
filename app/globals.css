@@ -230,5 +230,5 @@ html {
     }
     
     .services-slide-in {
-      animation: services-slide-in 1.5s ease-out forwards;
+      animation: services-slide-in 0.8s ease-out forwards;
     }

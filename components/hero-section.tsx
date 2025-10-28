@@ -36,8 +36,8 @@ export function HeroSection() {
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white rounded-full px-8 py-4 text-lg font-semibold group border border-orange-400 hover:border-orange-300 shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all"
               >
-                <a href="#about" className="flex items-center gap-2">
-                  LEARN MORE
+                <a href="#contact" className="flex items-center gap-2">
+                  Consult Us
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>

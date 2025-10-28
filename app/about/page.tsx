@@ -1,10 +1,15 @@
+import dynamic from 'next/dynamic'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Code, Shield, Database, Brain } from "lucide-react"
 import { PartnersSection } from "@/components/partners-section"
-import { TeamSection } from "@/components/team-section"
-import { BonjourSection } from "@/components/bonjour-section"
 import Image from "next/image"
+
+const TeamSection = dynamic(() => import('@/components/team-section').then(mod => mod.TeamSection), { ssr: false })
+const BonjourSection = dynamic(() => import('@/components/bonjour-section').then(mod => mod.BonjourSection), { 
+  ssr: false,
+  loading: () => <div className="h-96 bg-black animate-pulse" />
+})
 
 const expertiseAreas = [
   {

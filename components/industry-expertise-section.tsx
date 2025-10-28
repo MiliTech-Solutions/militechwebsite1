@@ -1,9 +1,9 @@
 import { Landmark, Stethoscope, Truck, Building2 } from "lucide-react"
 
 const items = [
-  { icon: Stethoscope, title: "Healthcare & HealthTech" },
+  { icon: Stethoscope, title: "Healthcare" },
   { icon: Landmark, title: "Banking & Finance" },
-  { icon: Truck, title: "Logistics & Supply Chain" },
+  { icon: Truck, title: "Logistics & Supply" },
   { icon: Building2, title: "Government & Military" },
 ]
 
