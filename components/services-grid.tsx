@@ -21,14 +21,14 @@ const services = [
     icon: Shield, 
     title: "Threat Intelligence", 
     desc: "Advanced detection and analysis for emerging risks.",
-    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    imageUrl: "https://i.postimg.cc/prjN05Lx/b6afc5fe684b07e882250f7d85cf9877.jpg",
     longDesc: "Our Threat Intelligence service provides proactive defense against cyber threats. We leverage cutting-edge technology and expert analysis to monitor the digital landscape for emerging risks, targeted attack campaigns, and malicious actors.\n\nBy gathering and analyzing data from a vast array of sources, we deliver actionable intelligence that empowers you to anticipate and neutralize threats before they impact your organization. This includes detailed reports on threat actors, their tactics, techniques, and procedures (TTPs), and indicators of compromise (IOCs) to bolster your security posture."
   },
   { 
     icon: Lock, 
     title: "Security Consulting", 
     desc: "Strategic guidance from certified experts.",
-    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    imageUrl: "https://i.postimg.cc/T1rSVqpY/7524088aa99450020e32f44537717736.jpg",
     longDesc: "Our Security Consulting services offer strategic guidance from a team of certified and experienced cybersecurity experts. We work closely with you to understand your business objectives and security challenges.\n\nOur consulting services cover a wide range of areas, including security strategy development, policy and procedure creation, architecture review, and technology selection. We provide tailored recommendations to help you build a robust and resilient security program that aligns with your business goals and regulatory requirements."
   },
   { 
@@ -42,7 +42,7 @@ const services = [
     icon: Eye, 
     title: "Incident Response", 
     desc: "Rapid remediation to restore operations.",
-    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    imageUrl: "https://i.postimg.cc/BbSDpHgf/7429e2f1931d41e4abb8600cd684c5a2.jpg",
     longDesc: "In the event of a security breach, our Incident Response team provides rapid and effective remediation to minimize damage and restore your operations. Our 24/7 response team follows a structured approach to manage incidents from initial detection to post-incident analysis.\n\nWe help you contain the threat, eradicate the attacker\'s presence, recover affected systems, and implement measures to prevent future occurrences. Our goal is to get you back to business as quickly and securely as possible."
   },
   { 
@@ -84,7 +84,7 @@ const services = [
     icon: Code, 
     title: "Ethical Hacking", 
     desc: "Authorized hacking attempts to find and fix security flaws.",
-    imageUrl: "https://i.postimg.cc/T2H5V3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
+    imageUrl: "https://i.postimg.cc/T2H5V_3Yq/charles-forerunner-3fPXt37X6UQ-unsplash_(1).jpg",
     longDesc: "Our Ethical Hacking service goes beyond standard penetration testing to provide a more comprehensive and adversarial assessment of your security. Our elite team of ethical hackers uses advanced techniques and a creative mindset to uncover complex vulnerabilities that automated tools and traditional testing methods might miss.\n\nWe conduct authorized, in-depth hacking attempts to provide you with a true understanding of your security resilience. This service is for organizations looking for the highest level of security assurance."
   }
 ]
